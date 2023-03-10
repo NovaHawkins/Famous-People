@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd Compilation(TM)</title>
+
+<style>
+
+.nerdImg{
+    width:300px;
+    height:400px;
+}
+
+.nerdInfo{
+    text-align:center;    
+}
+
+#nerdContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    flex-basis:auto;
+}
+
+</style>
+
+</head>
+<body>
+<h1>A compilation of some absolute, top-tier NERDS!</h1>
+<div id="nerdContainer">
+
+</div>
+
+</body>
+
+<script>
+
+var Nerds = [
+      {title: 'Nerd 1: Ada Lovelace',
+       img: 'https://media.newyorker.com/photos/590952556552fa0be682c157/master/w_2560%2Cc_limit/ada-lovelace-290.jpeg',
+       
+      },
+      {title: 'Nerd 2: Alan Turing',
+       img: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg',
+      },
+    
+      {title: 'Nerd 3: Charles Babbage',
+       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg',
+       
+      },
+      {title: 'Nerd 4: Steve Jobs',
+       img: 'https://cdn.britannica.com/04/171104-050-AEFE3141/Steve-Jobs-iPhone-2010.jpg',
+      },
+
+      {title: 'Nerd 5: Bill Gates',
+       img: 'https://cdn.britannica.com/47/188747-050-1D34E743/Bill-Gates-2011.jpg',
+      },
+
+      {title: 'Nerd 6: Elongated Muskrat',
+       img: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Elon_Musk_Colorado_2022_%28cropped%29.jpg',
+      },
+    ];
+
+
+    var elonNerd = document.createElement('img')
+    elonNerd.src="nerd6b.jpg"
+    elonNerd.classList.add("nerdImg")
+    document.body.appendChild(elonNerd)
+
+
+    for (var i = 0; i < Nerds.length; i++) {
+      var NerdsAbout = document.createElement('div')
+      var NerdsImg = document.createElement('img')
+      var nerdSet = document.getElementById('nerdContainer')
+      NerdsImg.src=Nerds[i].img
+      NerdsImg.classList.add("nerdImg")
+      NerdsAbout.classList.add("nerdInfo")
+      NerdsAbout.appendChild(NerdsImg)
+      var NerdsTitle = document.createTextNode(Nerds[i].title)
+      NerdsAbout.appendChild(NerdsTitle)
+      nerdSet.appendChild(NerdsAbout)
+    }
+
+
+</script>
+
+</html>
